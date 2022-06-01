@@ -1,0 +1,61 @@
+.dashtop_container {
+  height: calc(100vh - 60px);
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashtop_wrapper {
+  background-color: green;
+  display: flex;
+  width: 90%;
+  height: 90%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.dashtop_slide {
+  background-color: blue;
+  width: 100%;
+  animation: slider 15s infinite;
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.dashtop_photo {
+  width: 1500px;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 760px) {
+  .dashtop_container {
+    height: 50vh;
+  }
+
+  .dashtop_wrapper {
+    width: 100%;
+  }
+
+  .dashtop_photo {
+    width: 500px;
+  }
+}
